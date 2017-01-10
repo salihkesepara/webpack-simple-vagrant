@@ -1,7 +1,11 @@
 require('./scss/style.scss')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import DepositPage from './container/pages/depositPage'
 
-let msg = 'welcome to my ap'
-  console.log(msg)
+ReactDOM.render(
+  <DepositPage name="World" />,
+  document.body
+)
 
-document.write(msg)
 console.log('app loaded')

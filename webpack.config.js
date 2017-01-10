@@ -12,10 +12,16 @@ module.exports = {
     filename: '/dist/bundle.js'
   },
   module: {
+    preLoaders: [
+      //{test: /\.js$/, exclude: /node_modules/, loader: 'jshint-loader'}
+    ],
     loaders: [
-      {test: /\.js$/, exclude: /(node_modules|bower_components)/, loader: 'babel-loader', query: {presets: ['es2015']}},
+      {test: [/\.js$/, /\.es6$/], exclude: /(node_modules|bower_components)/, loader: 'babel-loader', query: {cacheDirectory: true, presets: ['react', 'es2015']}},
       {test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"]}
     ]
+  },
+  resolve: {
+    extensions: ['', '.js', '.es6']
   },
   
   devtool: "eval"
