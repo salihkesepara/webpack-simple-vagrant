@@ -1,3 +1,5 @@
+require('./scss/style.scss')
+
 let msg = 'welcome to my ap'
   console.log(msg)
 
