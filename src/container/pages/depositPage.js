@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 
-export default React.createClass({
-  render: function() {
+class DepositPage extends Component {
+  render() {
     return (
       <div>Hello, {this.props.name}</div>
     )
   }
-})
+}
+
+export default DepositPage

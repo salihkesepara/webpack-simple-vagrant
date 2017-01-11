@@ -1,11 +1,18 @@
-require('./scss/style.scss')
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component, PropTypes } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import DepositPage from './container/pages/depositPage'
 
-ReactDOM.render(
-  <DepositPage name="World" />,
-  document.body
-)
+class App extends Component {
+  constructor(props) {
+    super(props)
+  }
+  
+  render() {
+    return (
+      <DepositPage name="World" />
+    )
+  }
+}
 
-console.log('app loaded')
+export default App
